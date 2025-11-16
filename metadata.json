@@ -1,0 +1,5 @@
+{
+  "name": "Trình quản lý tên sản phẩm",
+  "description": "Một ứng dụng web để quản lý danh sách các tên sản phẩm đã được chuẩn hóa. Người dùng có thể nhập danh sách ban đầu, sau đó thêm, sửa và xóa từng sản phẩm một cách hiệu quả.",
+  "requestFramePermissions": []
+}
