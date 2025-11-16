@@ -14,8 +14,16 @@ interface ProcessedItem {
   text: string;
 }
 
+// FIX: Define props interface for EditableResultLine
+interface EditableResultLineProps {
+    item: ProcessedItem;
+    onUpdate: (id: number, text: string) => void;
+    onSplit: (id: number) => void;
+}
+
 // Sub-component for editable lines to prevent re-renders on every keystroke
-const EditableResultLine = ({ item, onUpdate, onSplit }: { item: ProcessedItem, onUpdate: (id: number, text: string) => void, onSplit: (id: number) => void }) => {
+// FIX: Use React.FC with the props interface to correctly type the component
+const EditableResultLine: React.FC<EditableResultLineProps> = ({ item, onUpdate, onSplit }) => {
     const [text, setText] = useState(item.text);
     const isUnrecognized = item.text.startsWith('[KHÔNG NHẬN DẠNG ĐƯỢỢC]:');
 
